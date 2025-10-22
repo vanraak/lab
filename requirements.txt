@@ -2,7 +2,7 @@ scikit-learn
 spacy
 pandas
 numpy
-matplotlib.pyplot
+matplotlib
 wordcloud
 mglearn
 nltk
