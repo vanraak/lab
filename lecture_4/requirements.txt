@@ -1,0 +1,10 @@
+sklearn
+spacy
+pandas
+numpy
+matplotlib.pyplot
+wordcloud
+mglearn
+nltk
+gensim
+tensorflow_hub
