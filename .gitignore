@@ -1,0 +1,5 @@
+# Ignore build output
+cache/
+
+#png files
+*.png
