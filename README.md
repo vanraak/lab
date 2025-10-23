@@ -15,3 +15,9 @@ Lecture 1: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org
 Tutorial 1: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vanraak/lab/HEAD?urlpath=%2Fdoc%2Ftree%2FTutorial_1.ipynb) 🔗
 
 Mock Exam: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vanraak/lab/HEAD?urlpath=%2Fdoc%2Ftree%2FMock_Exam.ipynb) 🔗
+
+This repository and its contents are provided for educational purposes only.
+Unauthorized distribution or modification without permission is not allowed.
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+&copy; Jeroen van Raak, 2025
