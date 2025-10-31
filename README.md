@@ -1,6 +1,6 @@
 # Business Lab & Professional Skills
 
-Welcome to the Business Lab & Professional Skills GitHub repository. This repository contains the materials for Lecture 1 and the accompanying Tutorial 1 of the course.
+Welcome to the Business Lab & Professional Skills GitHub repository. This repository contains the materials for Lecture 1, the accompanying Tutorial 1, and the mock exam of the course.
 
 ## About the course:
 
