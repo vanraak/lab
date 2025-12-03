@@ -17,10 +17,8 @@ University of Amsterdam: [Study Guide](https://studiegids.uva.nl/xmlpages/page/2
 | Notebook | Colab | Binder |
 ------------|-------|--------|
 |Lecture 1 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vanraak/lab/blob/main/Lecture_1.ipynb#copy)  | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vanraak/lab/HEAD?urlpath=%2Fdoc%2Ftree%2FLecture_1.ipynb) 🔗 |
-|Tutorial 1 | | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vanraak/lab/HEAD?urlpath=%2Fdoc%2Ftree%2FTutorial_1.ipynb) 🔗|
+|Tutorial 1 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vanraak/lab/blob/main/Tutorial_1.ipynb#copy) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vanraak/lab/HEAD?urlpath=%2Fdoc%2Ftree%2FTutorial_1.ipynb) 🔗|
 |Mock Exam ||  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vanraak/lab/HEAD?urlpath=%2Fdoc%2Ftree%2FMock_Exam.ipynb) 🔗|
-| Lecture 1  | <a href="https://colab.research.google.com/github/vanraak/lab/blob/main/Lecture_1.ipynb" target="_blank">Open</a> | <a href="https://mybinder.org/v2/gh/vanraak/lab/main?filepath=Lecture_1.ipynb" target="_blank">Open</a> |
-| Lecture 2  | <a href="https://colab.research.google.com/github/vanraak/lab/blob/main/Lecture_2.ipynb" target="_blank">Open</a> | <a href="https://mybinder.org/v2/gh/vanraak/lab/main?filepath=Lecture_2.ipynb" target="_blank">Open</a> |
 
 
 Please note: the GitHub page includes the exercises for the first week and a mock exam, but not the solutions. Students can contact me for access to the solutions.
