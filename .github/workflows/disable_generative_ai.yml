@@ -20,11 +20,25 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+      
+      # 3.5️⃣ Show changed files
+      - name: List all notebooks (sorted)
+        run: |
+          echo "All detected .ipynb files:"
+          find . -type f -name "*.ipynb" | sort
 
-      # 3️⃣ Run the notebook metadata script
       - name: Add Colab metadata
         run: python .github/scripts/add_colab_metadata.py
-
+        
+      - name: Show changed notebooks
+        run: |
+          echo "Changed files:"
+          git status --short
+          echo ""
+          echo "Notebook diffs:"
+          git diff --name-only -- "*.ipynb"
+          
+      
       # 4️⃣ Commit changes if there are any
       - name: Commit changes
         run: |
@@ -33,13 +47,6 @@ jobs:
           git add "*.ipynb"
           git diff --cached --quiet || git commit -m "Add Colab metadata to notebooks"
 
-      # 5️⃣ Force push to automation branch
-      - name: Push to automation branch
-        run: |
-          git branch -M update-notebooks
-          git push -f origin update-notebooks
-
-      # 6️⃣ Create or update Pull Request to main
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
@@ -49,4 +56,3 @@ jobs:
           title: "Add Colab metadata to notebooks"
           body: "This PR updates all notebooks to include the Colab metadata block."
           base: main
-          delete-branch: false
