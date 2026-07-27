@@ -1,5 +1,6 @@
 import json
 import os
+import glob
 
 COLAB_BLOCK = {"generative_ai_disabled": True, "provenance": []}
 
@@ -29,3 +30,12 @@ def update_ipynb(path):
         print(f"Updated Colab metadata: {path}")
     else:
         print(f"Skipped (already complete): {path}")
+
+
+if __name__ == "__main__":
+    notebooks = glob.glob("**/*.ipynb", recursive=True)
+
+    print(f"Found {len(notebooks)} notebooks")
+
+    for notebook in notebooks:
+        update_ipynb(notebook)
