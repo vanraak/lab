@@ -9,22 +9,23 @@ def update_ipynb(path):
         data = json.load(f)
 
     metadata = data.setdefault("metadata", {})
+    colab = metadata.setdefault("colab", {})
 
-    if "colab" not in metadata:
-        metadata["colab"] = COLAB_BLOCK
+    changed = False
+
+    if "generative_ai_disabled" not in colab:
+        colab["generative_ai_disabled"] = True
+        changed = True
+
+    if "provenance" not in colab:
+        colab["provenance"] = []
+        changed = True
+
+    if changed:
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2)
-        print(f"Added 'colab' block: {path}")
+            f.write("\n")
+
+        print(f"Updated Colab metadata: {path}")
     else:
-        print(f"Skipped (already has 'colab'): {path}")
-
-
-def update_all_notebooks(root="."):
-    for dirpath, _, files in os.walk(root):
-        for file in files:
-            if file.endswith(".ipynb"):
-                update_ipynb(os.path.join(dirpath, file))
-
-
-if __name__ == "__main__":
-    update_all_notebooks(".")
+        print(f"Skipped (already complete): {path}")
