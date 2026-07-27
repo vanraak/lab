@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,11 +27,6 @@ jobs:
       - name: Add Colab metadata
         run: python .github/scripts/add_colab_metadata.py
 
-      - name: Check changes
-        run: |
-          git status
-          git diff --stat
-
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
@@ -37,6 +34,11 @@ jobs:
           commit-message: "Add Colab metadata to notebooks"
           branch: update-notebooks
           title: "Add Colab metadata to notebooks"
-          body: "This PR updates all notebooks to include the Colab metadata block."
+          body: "Automatically added missing Colab metadata."
           base: main
-          delete-branch: false
+
+      - name: Auto merge PR
+        run: |
+          gh pr merge update-notebooks --squash --delete-branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
